@@ -79,3 +79,85 @@ $ git branch
 * dev
   main
 ```
+
+### EXERCISES 2
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git add home.html
+
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git stash
+Saved working directory and index state WIP on mainll be replaced by CRLF : 6602c44 Updated ReadMe
+                                                   : 6602c44 Updated ReadM
+
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises 
+(main)
+$ git add about.html
+warning: in the working copy of 'about.html', LF will be replaced by CRLF the next time Git touches it
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises 
+(main)
+$ git stash
+Saved working directory and index state WIP on main: 1b0fbe8 trial
+
+
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git stash list
+stash@{0}: WIP on main: 1b0fbe8 trial
+stash@{1}: WIP on main: 1b0fbe8 trial
+stash@{2}: WIP on main: 1b0fbe8 trial
+
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git stash pop stash@{1}
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+Dropped stash@{1} (712269913e961e53bf029ac9a1145914e7e2c909)
+
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git stash pop stash@{1}
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (6c2ce713ac61621568c86d58302815d06d82563a)
+
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git commit -m "Stash usage"
+[main ae142bd] Stash usage
+ 2 files changed, 23 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git stash pop
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Dropped refs/stash@{0} (6e6c53928307722b9bc71be2827905f90029b82f)
+
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git reset
+Unstaged changes after reset:
+M       README.md
+```
