@@ -79,10 +79,6 @@ $ git branch
 * dev
   main
 ```
-<<<<<<< HEAD
-=======
-
->>>>>>> 35a0a5a048c77117186fff92e84b1cfbc736364a
 ### EXERCISES 2
 
 ```bash
@@ -163,3 +159,87 @@ Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git reset
 Unstaged changes after reset:
 M       README.m
+
+
+## BUNDLE 2
+
+### Exercise 1
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git branch ft/bundle-2
+```
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git branch
+  dev
+  ft/bundle-2
+* main
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git checkout ft/bundle-2
+M       README.md
+Switched to branch 'ft/bundle-2'
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/bundle-2)
+$ git add services.html
+warning: in the working copy of 'services.html', LF will be replaced by CRLF the next time Git touches it
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   services.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)  
+        modified:   README.md
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/bundle-2)
+$ git commit -m "New files added"
+[ft/bundle-2 9fa511a] New files added
+ 1 file changed, 89 insertions(+)
+ create mode 100644 services.html
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking        
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.61 KiB | 411.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.     
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Prom004/TG-Git-exercises.git
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:   
+remote:      https://github.com/Prom004/TG-Git-exercises/pull/new/ft/bundle-2
+remote:
+To https://github.com/Prom004/TG-Git-Exercises.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+```
