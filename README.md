@@ -246,4 +246,179 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 
 
 ### EXERCISES 2
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git checkout main
+M       README.md
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+```
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git branch ft/service-redesign
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git commit -a -m "Updates on the new branch"
+[main 1fa6567] Updates on the new branch
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 482 bytes | 120.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Prom004/TG-Git-exercises.git
+To https://github.com/Prom004/TG-Git-Exercises.git
+   326eaae..1fa6567  main -> main
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/service-redesign)     
+$ git add services.html
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/service-redesign)     
+$ git commit -a -m "Updates"
+[ft/service-redesign 00be4f8] Updates
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/service-redesign)     
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 294 bytes | 147.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Prom004/TG-Git-exercises.git
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Prom004/TG-Git-exercises/pull/new/ft/service-redesign
+remote:
+To https://github.com/Prom004/TG-Git-Exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/service-redesign)     
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded. 
+  (use "git pull" to update your local branch)
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git add services.html
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git add .
+warning: in the working copy of '.vscode/settings.json', LF will be replaced 
+by CRLF the next time Git touches it
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git commit -a -m "Updated Services"
+[main 60bf3e7] Updated Services
+ 1 file changed, 3 insertions(+)
+ create mode 100644 .vscode/settings.json
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git push origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 639 bytes | 639.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Prom004/TG-Git-exercises.git
+To https://github.com/Prom004/TG-Git-Exercises.git
+   1522dda..f73955a  main -> main
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/service-redesign)     
+$ git diff main
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+deleted file mode 100644
+index 6f3a291..0000000
+--- a/.vscode/settings.json
++++ /dev/null
+@@ -1,3 +0,0 @@
+-{
+-    "liveServer.settings.port": 5501
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/service-redesign)     
+$ git checkout ft/service-redesign
+Already on 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/service-redesign)     
+$ git merge main
+Updating 00be4f8..f73955a
+Fast-forward
+ .vscode/settings.json | 3 +++
+ README.md             | 4 ++++
+ services.html         | 2 +-
+ 3 files changed, 8 insertions(+), 1 deletion(-)
+ create mode 100644 .vscode/settings.json
+```
+
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (ft/service-redesign)     
+$ git push origin ft/service-redesign
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Prom004/TG-Git-exercises.git
+To https://github.com/Prom004/TG-Git-Exercises.git
+   00be4f8..f73955a  ft/service-redesign -> ft/service-redesign
+```
 
