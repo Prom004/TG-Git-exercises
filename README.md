@@ -159,11 +159,12 @@ Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git reset
 Unstaged changes after reset:
 M       README.m
-
+```
 
 ## BUNDLE 2
 
 ### Exercise 1
+
 ```bash
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git branch ft/bundle-2
