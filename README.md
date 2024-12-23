@@ -79,98 +79,89 @@ $ git branch
 * dev
   main
 ```
-
 ### EXERCISES 2
 
-```
-Promise@DESKTOP-54LQL0B MIN~/TG-Giises (main)
-ain)
+```bash
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git add home.html
-warning: in the working copy of 'home.html', LF will be replaced by CRLF the next time Git touches it
 
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
-Saved working directory and index state WIP on main: 497c7e2 Initial commit                 F will be replaced by C
+$ git stash
+Saved working directory and index state WIP on mainll be replaced by CRLF : 6602c44 Updated ReadMe
+                                                   : 6602c44 Updated ReadM
 
-Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exerc main: 497c7e2 Initial ises (main)
-$ git add home.html
-fatal: pathspec 'home.html' did not match any ises (main)
-file
-
-
-Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises 
+(main)
 $ git add about.html
-warning: in the working copy of 'about.html', 
-LF will be replaced by CRLF the next time Git 
-touches it
-
-Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
+warning: in the working copy of 'about.html', LF will be replaced by CRLF the next time Git touches it
+Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises 
+(main)
 $ git stash
-Saved working directory and index state WIP on main: 497c7e2 Initial commit
+Saved working directory and index state WIP on main: 1b0fbe8 trial
 
-
-Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
-$ git add team.html
-warning: in the working copy of 'team.html', LF will be replaced by CRLF the next time Git touches it
-
-Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
-$ git stash
-Saved working directory and index state WIP on main: 497c7e2 Initial commit
 
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git stash list
-stash@{0}: WIP on main: 497c7e2 Initial commitstash@{1}: WIP on main: 497c7e2 Initial commitstash@{2}: WIP on main: 497c7e2 Initial commit
+stash@{0}: WIP on main: 1b0fbe8 trial
+stash@{1}: WIP on main: 1b0fbe8 trial
+stash@{2}: WIP on main: 1b0fbe8 trial
+
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git stash pop stash@{1}
 On branch main
-Your branch is up to date with 'origin/main'.
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        new file:   about.html
+        new file:   home.html
 
-Dropped stash@{1} (37f6d78d0b8619143303c098d3f54389747bba34)
+Dropped stash@{1} (712269913e961e53bf029ac9a1145914e7e2c909)
 
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git stash pop stash@{1}
 On branch main
-Your branch is up to date with 'origin/main'.
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   about.html
         new file:   home.html
 
-Dropped stash@{1} (b89c61c42594138f5a12860bbc15313ab6d2b92d)
+Dropped stash@{1} (6c2ce713ac61621568c86d58302815d06d82563a)
 
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
-$ git commit -m "use of stash"
-[main 8d90b35] use of stash
- 2 files changed, 29 insertions(+)
+$ git commit -m "Stash usage"
+[main ae142bd] Stash usage
+ 2 files changed, 23 insertions(+)
  create mode 100644 about.html
  create mode 100644 home.html
 
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
-$ git push origin main
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 927 bytes | 231.00 KiB/s, done.
-Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-To https://github.com/Prom004/TG-Git-exercises.git
-   497c7e2..8d90b35  main -> main
-
-Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git stash pop
 On branch main
-Your branch is up to date with 'origin/main'.
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   team.html
 
-Dropped refs/stash@{0} (2a061a6d9d7ac9c6dfdf4ce05fffc1f7e875d54d)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Dropped refs/stash@{0} (6e6c53928307722b9bc71be2827905f90029b82f)
 
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git reset
-```
+Unstaged changes after reset:
+M       README.md
+
+
+# BUNDLE 2
+### EXERCISE 1
+
+
