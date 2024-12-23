@@ -243,3 +243,7 @@ To https://github.com/Prom004/TG-Git-Exercises.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
+
+
+### EXERCISES 2
+
