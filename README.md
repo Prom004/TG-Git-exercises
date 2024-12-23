@@ -162,11 +162,4 @@ Dropped refs/stash@{0} (6e6c53928307722b9bc71be2827905f90029b82f)
 Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git reset
 Unstaged changes after reset:
-M       README.md
-<<<<<<< HEAD
-
-
-
-=======
-```
->>>>>>> 35a0a5a048c77117186fff92e84b1cfbc736364a
+M       README.m
