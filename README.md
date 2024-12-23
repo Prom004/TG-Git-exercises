@@ -79,6 +79,10 @@ $ git branch
 * dev
   main
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> 35a0a5a048c77117186fff92e84b1cfbc736364a
 ### EXERCISES 2
 
 ```bash
@@ -159,9 +163,10 @@ Promise@DESKTOP-54LQL0B MINGW64 ~/TG-Git-exercises (main)
 $ git reset
 Unstaged changes after reset:
 M       README.md
+<<<<<<< HEAD
 
 
-# BUNDLE 2
-### EXERCISE 1
 
-
+=======
+```
+>>>>>>> 35a0a5a048c77117186fff92e84b1cfbc736364a
